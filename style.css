@@ -1,0 +1,350 @@
+* {
+	margin: 0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+/* CLEARFIX METHOD */
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+body {
+	color:#333;
+	font: 18px 'Open Sans', Arial,  sans-serif;
+}
+
+.background {
+    width: 100%;
+    height: 100vh;
+    
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: -1;
+    background: /*url('https://images.pexels.com/photos/849/people-festival-party-dancing.jpg?h=350&auto=compress')*/
+    /*url('https://images.pexels.com/photos/849/people-festival-party-dancing.jpg?h=350&auto=compress')*/
+    url("img/party.jpg")
+    center/cover no-repeat;
+}
+
+.container {
+	max-width: 1000px;
+	margin-left:auto;
+	margin-right:auto;
+	padding-left:15px;
+	padding-right:15px;
+    text-align: center;
+}
+
+.header{
+	min-height: 100vh;
+	padding-top: 10vh;
+	
+	
+	/*background: url('http://www.worldatlas.com/upload/0f/84/e6/thinkstockphotos-478431908.jpg') center/cover no-repeat;*/
+	
+	
+	color:#fff;
+	text-shadow: 0 0 15px rgba(0, 0, 0, .3);
+	text-align:center;
+}
+
+	.header h1 {
+		margin-bottom: 30px;
+		font-size: 72px;
+	}
+
+button {
+    margin-top: 20px;
+    padding: 15px 40px;
+    background-color: #4b78a0;
+    font-size: 40px;
+    border-radius: 20px;
+    color: #fff;
+    font-family: "Quicksand";
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.header button:hover {
+    background-color: #0E0A39;
+    color:#fff;
+}
+
+
+a {    
+    color: #fff;
+	text-decoration:none;
+}
+
+a:active {
+    
+}
+
+a:visited {
+    
+}
+
+a:hover {
+    
+}
+
+
+
+	
+.nav {
+	position: sticky;
+	top: 0;
+	line-height: 70px;
+	background: #0E0A39;
+}
+
+	.nav ul {
+		display: flex;
+		justify-content: space-between;
+		list-style:none;
+		
+	}
+	
+		.nav li {
+			width:100%;
+		}
+		
+			.nav a {
+				display:block;
+				text-align: center;
+				color:#fff;
+				text-decoration:none;
+			}
+			
+				.nav a:hover {
+					background: #375875;
+				}
+                
+                .nav a:focus {
+					background: #7c8288;
+				}
+				
+.section {
+    
+	//padding-top:30px; /* margines wewnetrzny */ 
+    padding: auto 0;
+	text-align: justify;
+	height: calc(100vh - 70px);
+}
+
+	.section:nth-of-type(even) {
+		//background: #f3f3f3;
+	}
+	
+    
+	.section *:not(:first-child) {
+		margin-top:30px;
+	}
+    
+
+/*
+#home, #onas, #posluchaj, #kontakt {
+    background: 
+    /*url('https://images.pexels.com/photos/849/people-festival-party-dancing.jpg?h=350&auto=compress')*/
+    /*url("img/party.jpg")center/cover no-repeat;
+}
+*/
+
+.lista {
+    float:left;
+    width: 450px;
+    margin: 0 auto;;
+    text-align: left;
+    padding: 10px;
+    font-style: italic;
+    font-weight: 800;
+}
+
+.lista h3 {
+    text-decoration: underline;
+}
+
+.layer {
+    display: inline-block;
+    width: 850px;
+    height: calc(100vh - 190px);
+    margin:  40px auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    padding: 20px;
+    color:#fff;
+}
+
+.layer img {
+    float:right;
+    margin: 20px;
+}
+
+.layer {
+    text-align: left;
+    overflow: hidden;
+}
+.layer h1 {
+    color:#ff8a26;
+    text-align: center;
+}
+
+.layer span {
+    color:#ff8a26;
+    font-weight: 700;
+}
+ol li {
+    padding: 0 20px;
+    font-size: 20px;
+    list-style-type: none;
+}
+
+ol li p {
+    display: inline-block;
+    width: 220px;
+}
+
+audio {
+    margin-left: 20px;    
+}
+
+.footer {
+    
+	width:100%;
+	background-color: #4b78a0;
+    padding: 10px;
+    text-align:center;
+    color:#fff;
+	position:fixed;
+	right:0px;
+	bottom:0px;
+	display:none;
+}
+
+/* social media */
+#kontakt .layer {
+    text-align: center;
+}
+
+.socials {
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.yt {
+	margin:30px 10px 10px 10px;
+	width: 60px;
+	height: 60px;
+    line-height: 60px;
+	background-color: #d94348;
+	float:left;
+	text-align: center;
+    transition: transform .3s;
+    border-radius: 50%;
+    font-size: 30px;
+}
+.yt:hover
+{
+	background-color: #b83237;
+    transform: scale(1.10);
+}
+
+.fb
+{
+	margin:10px;
+	width: 60px;
+	height: 60px;
+    line-height: 60px;
+	background-color: #4668b3;
+	float: left;
+	text-align: center;
+    transition: transform .3s;
+    border-radius: 50%;
+    font-size: 30px;
+}
+.fb:hover
+{
+	background-color: #3557a2;
+    transform: scale(1.10);
+}
+
+.gplus
+{
+	margin:10px;
+	width: 60px;
+	height: 60px;
+    line-height: 60px;
+	background-color: #d95333;
+	float: left;
+	text-align: center;
+    transition: transform .3s;
+    border-radius: 50%;
+    font-size: 30px;
+}
+.gplus:hover
+{
+	background-color: #c84222;
+    transform: scale(1.10);
+}
+
+.tw
+{
+	margin:10px;
+	width: 60px;
+	height: 60px;
+    line-height: 60px;
+	background-color: #3095d3;
+	float: left;
+	text-align: center;
+    transition: transform .3s;
+    border-radius: 50%;
+    font-size: 30px;
+}
+.tw:hover
+{
+	background-color: #2084c2;
+    transform: scale(1.10);
+}
+
+.scroll {
+    width:64px;
+	height:64px;
+	text-decoration:none;
+	
+	position:fixed;
+	right:150px;
+	bottom:80px;
+	display:;
+}
+.scrollup
+{
+	width:64px;
+	height:64px;
+	text-decoration:none;
+	background:url("img/top.png") no-repeat 0px 0px;
+	position:fixed;
+	right:50px;
+	bottom:80px;
+	display:none;
+}
+
+.mapa {
+    float:left;
+    background-color: #333;
+    width:400px;
+    height: 320px;
+    overflow: hidden;
+}
+
+
+
+
