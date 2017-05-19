@@ -12,10 +12,11 @@
 		<link rel="stylesheet" href="style.css" type="text/css"/>
 		<link rel="stylesheet" href="songlist.css" type="text/css"/>
 		
-		<!--
+		
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-		-->
+		<!--
 		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css"/>
+		-->
 		<script>window.jQuery || document.write('<script src="jQuery v3.1.0.js">\x3C/script>')</script>
 		<script src="jquery.scrollTo.min.js"></script>
 		
@@ -59,6 +60,18 @@
 				else $('.scroll').fadeOut();
 			
 			});
+            
+            //link (HOME) background color
+            $(document).ready(function(){
+                
+                $('#button').click(function(){
+                    $('#start').css("background-color", "#7c8288");
+                });
+                
+                 $('.nav a').click(function(){
+                    $('#start').css("background-color", "");
+                });
+            });
 			
 		</script>				
 	</head>
@@ -66,33 +79,21 @@
 	<body>
 	    <div class="background"></div>
 		<header class="header">
-			    <!-- link z klasa scrollup ze zdieciem w tle (strzalka) do którego odnosi sie scrypt wykonujacy scrolling do góry -->
-			    
+			   
 			    <a href="#" class="scrollup"></a>
 			    
-			    <!-- link z klasa scroll z zagniezdzonym zdieciem (strzalka) do którego odnosi sie scrypt wykonujacy scrolling do góry 
-			    
-			    <a href="#" class="scroll"><img class="scroll" src="img/top.png" alt=""></a>
-			    -->
-			    
-			    <!--
-               <img src="http://www.expresszespol.pl/_img/logo.png" alt="logo">
-               -->
-               <img src="img/logo.png" alt="logo">
+                <img src="img/logo.png" alt="logo">
                 <div class="slogan">
-                <!--
-                <img src="http://www.expresszespol.pl/_img/heder.png" alt="zespół express">
-                -->
-                <img src="img/express.png" alt="zespół express">
-                </div>
-                 <button><a id="link3" href="#home">START</a></button>
+                    <img src="img/express.png" alt="zespół express">
+                </div> 
+                <a id="button" href="#home">START</a>
 			
 		</header>
 		
 		<nav class="nav">
 			<div class="container">
 				<ul>
-					<li><a href="#home">Home</a></li>
+					<li><a href="#home" id="start">Home</a></li>
 					<li><a href="#onas">O nas</a></li>
 					<li><a href="#posluchaj">Posluchaj</a></li>
 					<li><a href="#kontakt">Kontakt</a></li>
@@ -104,8 +105,6 @@
 			<div class="container">
             <div class="layer">
 				<h1>Zespół Muzyczny EXPRESS</h1>
-				<!--
-				<img src="http://www.expresszespol.pl/_img/foto1.png" alt="">-->
 				
 				<img src="img/foto1.png" alt="">
 				
@@ -115,7 +114,7 @@
 				    <li>Profesjonalizm i doświadczenie</li>
 				    <li>Wysoką jakość świadczonych usług</li>
 				    <li>Bogaty repertuar zarówno dla starszej
-jak i młodszej publiczności</li>
+                        jak i młodszej publiczności</li>
 				    <li>Doskonałą zabawę i dobry humor</li>
 				</ul>
                 </div>
@@ -127,8 +126,6 @@ jak i młodszej publiczności</li>
 			<div class="container">
 			<div class="layer">
 				<h1>Zespół muzyczny EXPRESS</h1>
-               <!--
-               <img src="http://www.expresszespol.pl/_img/mic.png" alt="mikrofon">-->
                
                <img src="img/mic.png" alt="mikrofon">
                
@@ -138,7 +135,7 @@ jak i młodszej publiczności</li>
                 <p>Zapewniamy oprawę muzyczną imprez okolicznościowych typu:
                 wesela, bankiety, bale, studniówki, imprezy firmowe.</p>
 
-                <p>Skład zespołu to:</p>
+                <h4>Skład zespołu to:</h4>
                 
                 <span>Sebastian Juszczuk</span> – gitara elektryczna, vocal<br>
                 <span>Kuba Gwardecki</span> – instrumenty klawiszowe, vocal<br>
@@ -151,48 +148,34 @@ jak i młodszej publiczności</li>
 		
 		<section class="section" id="posluchaj">
 			<div class="container">
-			<div class="layer">
-			<h1>Zespół muzyczny EXPRESS</h1>
-               <!--
-               <img src="http://www.expresszespol.pl/_img/mic.png" alt="mikrofon">-->
-               
-               <img src="img/mic.png" alt="mikrofon">
-               
-               <div class="wrapper">
+                <div class="layer">
+                    <h1>Zespół muzyczny EXPRESS</h1>
                    
-                
-               
-               <ul id="playlist">
-                  <li>
-                      <audio id="audio" preload="auto" tabindex="0" controls="" >
-                          <source src="music/02Express_Ktos_mnie_pokochal.mp3">
-                          Twoja przegladarka nie obsluguje audio player
-                    </audio>
-                  </li>
-                   <li>
-                      <a href="music/02Express_Ktos_mnie_pokochal.mp3"><p>01. Ktos mnie pokochał </p></a>
-                       
-                   </li>
-                   <li>
-                      <a href="music/05Express_Moon_River.mp3"><p>02. Moon River</p> </a>
-                   </li>
-                   <li>
-                     <a href="music/03Express_Blue_Suede_Shoes.mp3"><p>03. Blue Suede Shoes</p></a>
-                   </li>
-                   <li>
-                      <a href="music/04Express_W_sina_dal.mp3"><p>04. W siną dal </p></a>
-                   </li>
-               </ul>
-              
-               
-            
-       
-                </div>
-                    
+                   <img src="img/mic.png" alt="mikrofon">
+
+                   <ul id="playlist">
+                      <li>
+                          <audio id="audio" preload="auto" tabindex="0" controls="" >
+                              <source src="music/02Express_Ktos_mnie_pokochal.mp3">
+                              Twoja przegladarka nie obsluguje audio player
+                        </audio>
+                      </li>
+                       <li>
+                          <a href="music/02Express_Ktos_mnie_pokochal.mp3"><p>01. Ktos mnie pokochał </p></a>
+
+                       </li>
+                       <li>
+                          <a href="music/05Express_Moon_River.mp3"><p>02. Moon River</p> </a>
+                       </li>
+                       <li>
+                         <a href="music/03Express_Blue_Suede_Shoes.mp3"><p>03. Blue Suede Shoes</p></a>
+                       </li>
+                       <li>
+                          <a href="music/04Express_W_sina_dal.mp3"><p>04. W siną dal </p></a>
+                       </li>
+                   </ul>
+                </div>   
             </div>
-               
-			</div>
-          
 		</section>
 		
 		<section class="section" id="kontakt">
@@ -202,6 +185,7 @@ jak i młodszej publiczności</li>
 				<div class="mapa">
 				    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d660691.5977269637!2d18.748058!3d49.695239!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4711543a4845dfe1%3A0xf32c11286c7ba56!2sGo%C5%82kowice%2C+Polska!5e0!3m2!1spl!2spl!4v1484820511540" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 				</div>
+                <div class="socials">
                 <h2>Kontakt</h2>
                 <h4>Tomek Brzoza</h4>
                     44-341 Gołkowice<br> 
@@ -210,7 +194,7 @@ jak i młodszej publiczności</li>
                     505 063 548<br>
                     e-mail: mar11123@wp.pl<br>
 				
-                <div class="socials">
+                
                     <div class="yt"><a href="https://www.youtube.com/watch?v=4fk2prKnYnI" target="_blank"><i class="fa fa-youtube"></i></a></div>
                     <div class="fb"><i class="fa fa-facebook"></i></div>
                     <div class="gplus"><i class="fa fa-google-plus"></i></div>
