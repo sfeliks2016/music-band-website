@@ -9,7 +9,7 @@ function init(){
     var tracks = playlist.find('li a');
     var len = tracks.length - 1;
     audio[0].volume = .10;
-    audio[0].play();
+    //audio[0].play();
     playlist.find('a').click(function(e){
         e.preventDefault();
         link = $(this);
